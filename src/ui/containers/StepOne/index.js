@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
+import Translator from './../Translator';
 import { changeFirstName } from './actions';
 import style from './styles/style.css';
 
@@ -18,7 +19,7 @@ class StepOne extends Component {
         return (
             <div>
                 stepOne Container
-                <div>First Name: <span className={style.firstNameLabel}>{value}</span></div>
+                <div><Translator>firstName</Translator>: <span className={style.firstNameLabel}>{value}</span></div>
                 <input type='text' value={value} onChange={this.handleChange} />
             </div>
         );

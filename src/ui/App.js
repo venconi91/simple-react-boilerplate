@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import store  from './store';
 
+import Config from './containers/Config';
 import StepOne from './pages/StepOne';
 import StepTwo from './pages/StepTwo';
 import PageNotFound from './pages/PageNotFound';
@@ -14,7 +15,7 @@ class App extends Component {
     return (
         <Provider store={store}>
             <BrowserRouter>
-            <div>
+            <Config>
               <header>
                 <nav>
                   <ul>
@@ -29,7 +30,7 @@ class App extends Component {
                   <Route path='/stepTwo' component={StepTwo} />
                   <Route path='*' component={PageNotFound} />
                 </Switch>
-              </div>
+              </Config>
             </BrowserRouter>
         </Provider>
     );
