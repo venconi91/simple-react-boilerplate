@@ -1,16 +1,37 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { Provider } from 'react-redux';
+
+import store  from './store';
+
+import StepOne from './pages/StepOne';
+import StepTwo from './pages/StepTwo';
+import PageNotFound from './pages/PageNotFound';
 
 class App extends Component {
   render() {
+    // TODO: make BrowserHistory children separate components
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to rel111222oad.
-        </p>
-      </div>
+        <Provider store={store}>
+            <BrowserRouter>
+            <div>
+              <header>
+                <nav>
+                  <ul>
+                    <li><Link to='/'>Step One</Link></li>
+                    <li><Link to='/stepTwo'>step Two</Link></li>
+                    <li><Link to='/notFound'>Not Found</Link></li>
+                  </ul>
+                </nav>
+              </header>
+                <Switch>
+                  <Route exact path='/' component={StepOne} />
+                  <Route path='/stepTwo' component={StepTwo} />
+                  <Route path='*' component={PageNotFound} />
+                </Switch>
+              </div>
+            </BrowserRouter>
+        </Provider>
     );
   }
 }
