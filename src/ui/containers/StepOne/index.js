@@ -18,7 +18,7 @@ class StepOne extends Component {
         let {value} = this.props;
         return (
             <div>
-                stepOne Container
+                <span className={'firstNameLabel'}>stepOne Container</span>
                 <div><Translator>firstName</Translator>: <span className={style.firstNameLabel}>{value}</span></div>
                 <input type='text' value={value} onChange={this.handleChange} />
             </div>
