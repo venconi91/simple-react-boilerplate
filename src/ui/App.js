@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store  from './store';
 
-import Config from './containers/Config';
+import Config from './containers/AppConfig';
 import StepOne from './pages/StepOne';
 import StepTwo from './pages/StepTwo';
 import PageNotFound from './pages/PageNotFound';
@@ -14,8 +14,9 @@ class App extends Component {
     // TODO: make BrowserHistory children separate components
     return (
         <Provider store={store}>
+          <Config>
             <BrowserRouter>
-            <Config>
+            <div>
               <header>
                 <nav>
                   <ul>
@@ -30,8 +31,9 @@ class App extends Component {
                   <Route path='/stepTwo' component={StepTwo} />
                   <Route path='*' component={PageNotFound} />
                 </Switch>
-              </Config>
+              </div>
             </BrowserRouter>
+            </Config>
         </Provider>
     );
   }

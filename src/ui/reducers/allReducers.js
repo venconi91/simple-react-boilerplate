@@ -1,7 +1,7 @@
 
 import stepOne from './../containers/StepOne/reducer';
 import stepTwo from './../containers/StepTwo/reducer';
-import localization from './../containers/Config/reducer';
+import localization from './../containers/AppConfig/reducer';
 
 export default {
     stepOne,
