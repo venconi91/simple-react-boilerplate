@@ -1,16 +1,10 @@
-.firstParagraph {
-    background-color: blue;
+.routesWrapper {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    flex-direction: column;
 }
 
-/* .secondParagraph {
-    background-color: yellowgreen;
-} */
-
-.thirdParagraph {
-    background-color: springgreen;
-    color: blue;
-}
-
-.thirdParagraph:hover {
-    color: black;
+.main {
+    flex: 1 0 auto;
 }

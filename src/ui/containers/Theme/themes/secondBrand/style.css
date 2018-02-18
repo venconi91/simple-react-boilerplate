@@ -1,0 +1,16 @@
+.firstParagraph {
+    background-color: red;
+}
+
+/* .secondParagraph {
+    background-color: yellowgreen;
+} */
+
+.thirdParagraph {
+    background-color: red;
+    color: blue;
+}
+
+.thirdParagraph:hover {
+    color: black;
+}

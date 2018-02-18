@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import Translator from './../Translator';
+import ThemeTester from './../../components/ThemeTester';
 import { changeFirstName } from './actions';
-import style from './styles/style.css';
+import style from './style.css';
 
 class StepOne extends Component {
     constructor(props) {
@@ -21,6 +22,9 @@ class StepOne extends Component {
                 stepOne Container
                 <div><Translator>firstName</Translator>: <span className={style.firstNameLabel}>{value}</span></div>
                 <input type='text' value={value} onChange={this.handleChange} />
+                <div>
+                    <ThemeTester />
+                </div>
             </div>
         );
     }

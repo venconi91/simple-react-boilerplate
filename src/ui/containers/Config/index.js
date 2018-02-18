@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { changeLocale } from './actions';
+import {Helmet} from "react-helmet";
+import { loadConfig } from './actions';
+import * as configConstants from './constants';
 
 class Config extends Component {
     componentWillMount() {
-        setTimeout(() => {
-            this.props.changeLocale('de');
-        }, 5000);
+        this.props.loadConfig();
     }
     render() {
-        return this.props.children;
+        let {hasConfig, pageTitle, children} = this.props;
+        return hasConfig && <div>
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            {children}
+        </div>
     }
 }
 
 function mapStateToProps(state, ownProps) {
-    return { };
+    return {
+        hasConfig: state.config.get('isConfigSet'),
+        pageTitle: state.config.get(configConstants.PAGE_TITLE)
+    };
 }
 
 export default connect(
     mapStateToProps,
-    { changeLocale }
+    { loadConfig }
 )(Config);

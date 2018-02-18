@@ -1,1 +1,1 @@
-export const CHANGE_LOCALE = Symbol('CHANGE_LOCALE');
+export const LOAD_CONFIG = Symbol('LOAD_CONFIG');
