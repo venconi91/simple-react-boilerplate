@@ -25,7 +25,7 @@ class Theme extends Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-      brandName: state.config.get(BRAND)
+      brandName: state.envConfig.get(BRAND)
   };
 }
 

@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 import { loadConfig } from './actions';
 import * as configConstants from './constants';
 
-class Config extends Component {
+class EnvConfig extends Component {
     componentWillMount() {
         this.props.loadConfig();
     }
@@ -21,12 +21,12 @@ class Config extends Component {
 
 function mapStateToProps(state, ownProps) {
     return {
-        hasConfig: state.config.get('isConfigSet'),
-        pageTitle: state.config.get(configConstants.PAGE_TITLE)
+        hasConfig: state.envConfig.get('isConfigSet'),
+        pageTitle: state.envConfig.get(configConstants.PAGE_TITLE)
     };
 }
 
 export default connect(
     mapStateToProps,
     { loadConfig }
-)(Config);
+)(EnvConfig);

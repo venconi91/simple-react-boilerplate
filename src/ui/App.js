@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store  from './store';
 
-import Config from './containers/Config';
+import EnvConfig from './containers/EnvConfig';
 import Theme from './containers/Theme';
 import Localization from './containers/Localization';
 import Routes from './Routes';
@@ -13,13 +13,13 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Config>
+        <EnvConfig>
           <Theme>
             <Localization>
               <Routes />
             </Localization>
           </Theme>
-        </Config>
+        </EnvConfig>
       </Provider>
     );
   }

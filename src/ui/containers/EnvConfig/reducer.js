@@ -4,14 +4,13 @@ import * as actionTypes from './actionTypes';
 import * as configKeys from './constants';
 
 const defaultState = immutable.fromJS({
-    isConfigSet: false,
-    config: {},
+    isConfigSet: false
 });
 
 const actionStatusSent = 'sent';
 const actionStatusReceived = 'received';
 
-export function config(state = defaultState, action) {
+export function envConfig(state = defaultState, action) {
     if (action.type === actionTypes.LOAD_CONFIG && action.result) {
         let immutableResult = immutable.fromJS(action.result);  
         return state
@@ -24,4 +23,4 @@ export function config(state = defaultState, action) {
     return state;
 }
 
-export default config;
+export default envConfig;
