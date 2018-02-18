@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { ThemeProvider } from 'react-css-themr';
-import {BRAND} from './../Config/constants';
+import {BRAND} from './../EnvConfig/constants';
 
 import firstBrandTheme from './themes/firstBrand';
 import secondBrandTheme from './themes/secondBrand';
