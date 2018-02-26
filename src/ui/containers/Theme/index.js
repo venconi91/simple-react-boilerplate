@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { ThemeProvider } from 'react-css-themr';
 import { BRAND } from './../EnvConfig/constants';
@@ -22,6 +23,11 @@ class Theme extends Component {
     );
   }
 }
+
+Theme.propTypes = {
+  brandName: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};
 
 function mapStateToProps(state) {
   return {

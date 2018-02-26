@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { changeLocale } from './actions';
 
@@ -12,6 +13,11 @@ class Localization extends Component {
     return this.props.children;
   }
 }
+
+Localization.propTypes = {
+  children: PropTypes.node.isRequired,
+  changeLocale: PropTypes.func.isRequired
+};
 
 function mapStateToProps() {
   return {};

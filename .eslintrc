@@ -9,6 +9,7 @@
       "import/no-named-as-default": "off",
       "react/jsx-filename-extension": "off",
       "react/prefer-stateless-function": "off",
+      "react/forbid-prop-types": "off",
       "jsx-quotes": ["error", "prefer-single"]
     }
   }

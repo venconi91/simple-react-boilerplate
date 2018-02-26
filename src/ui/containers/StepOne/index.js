@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Translator from './../Translator';
@@ -12,7 +13,7 @@ class StepOne extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    let newValue = e.target.value;
+    const newValue = e.target.value;
     this.props.changeFirstName(newValue);
   }
   render() {
@@ -20,7 +21,9 @@ class StepOne extends Component {
     return (
       <div>
         stepOne Container
-        <div><Translator>firstName</Translator>: <span className={style.firstNameLabel}>{value}</span></div>
+        <div><Translator>firstName</Translator>:
+          <span className={style.firstNameLabel}>{value}</span>
+        </div>
         <input type='text' value={value} onChange={this.handleChange} />
         <div>
           <ThemeTester />
@@ -29,6 +32,11 @@ class StepOne extends Component {
     );
   }
 }
+
+StepOne.propTypes = {
+  value: PropTypes.string.isRequired,
+  changeFirstName: PropTypes.func.isRequired
+};
 
 function mapStateToProps(state) {
   return {

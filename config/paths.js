@@ -1,6 +1,5 @@
-'use strict';
-
 const path = require('path');
+
 const appRootDirectory = process.cwd();
 
 const resolveDir = relativePath => path.resolve(appRootDirectory, relativePath);

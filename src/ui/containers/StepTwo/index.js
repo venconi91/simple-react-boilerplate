@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { changeLastName } from './actions';
@@ -9,7 +10,7 @@ class StepOne extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
-    let newValue = e.target.value;
+    const newValue = e.target.value;
     this.props.changeLastName(newValue);
   }
   render() {
@@ -23,6 +24,11 @@ class StepOne extends Component {
     );
   }
 }
+
+StepOne.propTypes = {
+  value: PropTypes.string.isRequired,
+  changeLastName: PropTypes.func.isRequired
+};
 
 function mapStateToProps(state) {
   return {

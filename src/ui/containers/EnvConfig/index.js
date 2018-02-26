@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { loadConfig } from './actions';
@@ -11,7 +12,8 @@ class EnvConfig extends Component {
   render() {
     const { hasConfig, pageTitle, children } = this.props;
     return (
-      hasConfig && <div>
+      hasConfig &&
+      <div>
         <Helmet>
           <title>{pageTitle}</title>
         </Helmet>
@@ -20,6 +22,13 @@ class EnvConfig extends Component {
     );
   }
 }
+
+EnvConfig.propTypes = {
+  hasConfig: PropTypes.bool.isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  loadConfig: PropTypes.func.isRequired
+};
 
 function mapStateToProps(state) {
   return {
