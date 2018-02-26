@@ -5,18 +5,18 @@ import getLocalizedLabels from './localizations';
 
 
 const defaultState = immutable.fromJS({
-    currentLocale: 'en',
-    localizedLabels: getLocalizedLabels()
+  currentLocale: 'en',
+  localizedLabels: getLocalizedLabels()
 });
 
 export function localization(state = defaultState, action) {
-    if (action.type === actionTypes.CHANGE_LOCALE) {
-        return state
-            .set('currentLocale', action.locale)
-            .set('localizedLabels', immutable.fromJS(getLocalizedLabels(action.locale)));
-    }
+  if (action.type === actionTypes.CHANGE_LOCALE) {
+    return state
+      .set('currentLocale', action.locale)
+      .set('localizedLabels', immutable.fromJS(getLocalizedLabels(action.locale)));
+  }
 
-    return state;
+  return state;
 }
 
 export default localization;

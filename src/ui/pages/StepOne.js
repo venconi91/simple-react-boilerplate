@@ -4,12 +4,11 @@ import StepOneContainer from './../containers/StepOne';
 class StepOne extends Component {
   render() {
     return (
-        <div>
-            <StepOneContainer />
-        </div>
+      <div>
+        <StepOneContainer />
+      </div>
     );
   }
 }
 
 export default StepOne;
- 

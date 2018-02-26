@@ -1,5 +1,5 @@
 const labels = {
-    firstName: 'Vorname'
-}
+  firstName: 'Vorname'
+};
 
 export default labels;

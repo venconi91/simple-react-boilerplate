@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import StepOne from './pages/StepOne';
 import StepTwo from './pages/StepTwo';
@@ -12,10 +12,10 @@ import style from './style.css';
 class Routes extends Component {
   render() {
     return (
-        <BrowserRouter>
-            <div className={style.routesWrapper}>
-                <Header>
-                    {/* <header>
+      <BrowserRouter>
+        <div className={style.routesWrapper}>
+          <Header>
+            {/* <header>
                         <nav>
                         <ul>
                             <li><Link to='/'>Step One</Link></li>
@@ -24,23 +24,23 @@ class Routes extends Component {
                         </ul>
                         </nav>
                     </header> */}
-                </Header>
-                <div className={style.main}>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>testing flexbox with a lot of content</p>
+          </Header>
+          <div className={style.main}>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>main</p>
+            <p>testing flexbox with a lot of content</p>
 
-                    {/* <p>testing flexbox with a lot of content</p>
+            {/* <p>testing flexbox with a lot of content</p>
                     <p>main</p>
                     <p>main</p>
                     <p>main</p>
@@ -60,15 +60,15 @@ class Routes extends Component {
                     <p>main</p>
                     <p>main</p>
                     <p>main</p> */}
-                    <Switch>
-                        <Route exact path='/' component={StepOne} />
-                        <Route path='/stepTwo' component={StepTwo} />
-                        <Route path='*' component={PageNotFound} />
-                    </Switch>
-                </div>
-                <Footer />
-            </div>
-        </BrowserRouter>
+            <Switch>
+              <Route exact path='/' component={StepOne} />
+              <Route path='/stepTwo' component={StepTwo} />
+              <Route path='*' component={PageNotFound} />
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -1,8 +1,8 @@
-import {ComponentId as themeTesterId} from './../../../../components/ThemeTester';
+import { ComponentId as themeTesterId } from './../../../../components/ThemeTester';
 import themeTesterCss from './style.css';
 
 const theme = {
-    [themeTesterId]: themeTesterCss,
+  [themeTesterId]: themeTesterCss,
 };
 
 export default theme;

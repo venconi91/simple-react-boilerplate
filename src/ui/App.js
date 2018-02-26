@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import { Provider } from 'react-redux';
 
-import store  from './store';
+import store from './store';
 
 import EnvConfig from './containers/EnvConfig';
 import Theme from './containers/Theme';

@@ -1,6 +1,14 @@
 {
     "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
     "rules": {
-      "comma-dangle": 0
+      "comma-dangle": "off",
+      "import/prefer-default-export": "off",
+      "import/no-named-as-default": "off",
+      "react/jsx-filename-extension": "off",
+      "react/prefer-stateless-function": "off",
+      "jsx-quotes": ["error", "prefer-single"]
     }
   }
