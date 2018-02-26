@@ -10,5 +10,6 @@ module.exports = {
   buildPath: resolveDir('build'),
   template: resolveDir('src/template.html'),
   entryPoint: resolveDir('src/ui/index.js'),
-  envFile: resolveDir('config/.env')
+  devEnvFile: resolveDir('config/.devEnv'),
+  prodEnvFile: resolveDir('config/.prodEnv')
 };

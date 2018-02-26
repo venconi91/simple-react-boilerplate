@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "build:dev": "NODE_ENV=development&&webpack",
-    "build:prod": "NODE_ENV=production&&webpack",
-    "start": "webpack-dev-server",
+    "build:dev": "webpack --config config/webpack.config.dev.js",
+    "build:prod": "webpack --config config/webpack.config.prod.js",
+    "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const paths = require('./paths');
+require('dotenv').config({ path: paths.devEnvFile });
 
 module.exports = {
   context: paths.srcPath,
