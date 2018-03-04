@@ -15,8 +15,8 @@ module.exports = {
   },
   output: {
     path: paths.buildPath,
-    filename: '[name].[chunkhash:8].js',
-    chunkFilename: '[name].[chunkhash:8].chunk.js',
+    filename: 'public/[name].[chunkhash:8].js',
+    chunkFilename: 'public/[name].[chunkhash:8].chunk.js',
     publicPath: '/',
   },
   resolve: {

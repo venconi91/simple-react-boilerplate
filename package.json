@@ -5,7 +5,10 @@
   "scripts": {
     "build:dev": "webpack --config config/webpack.config.dev.js",
     "build:prod": "webpack --config config/webpack.config.prod.js",
+    "build:image": "docker build -t test-app .",
+    "build:testContainer": "docker container run --name test-app -d -p 8090:80 test-app",
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
+    "cleanTestContainer": "docker container stop test-app && docker container rm test-app && docker image rm test-app",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
