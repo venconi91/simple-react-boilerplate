@@ -14,52 +14,8 @@ class Routes extends Component {
     return (
       <BrowserRouter>
         <div className={style.routesWrapper}>
-          <Header>
-            {/* <header>
-                        <nav>
-                        <ul>
-                            <li><Link to='/'>Step One</Link></li>
-                            <li><Link to='/stepTwo'>step Two</Link></li>
-                            <li><Link to='/notFound'>Not Found</Link></li>
-                        </ul>
-                        </nav>
-                    </header> */}
-          </Header>
+          <Header />
           <div className={style.main}>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>main</p>
-            <p>testing flexbox with a lot of content</p>
-
-            {/* <p>testing flexbox with a lot of content</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p>
-                    <p>main</p> */}
             <Switch>
               <Route exact path='/' component={StepOne} />
               <Route path='/stepTwo' component={StepTwo} />
